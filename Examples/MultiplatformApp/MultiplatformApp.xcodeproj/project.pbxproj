@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F969514C2C217E31009A4362 /* HUDHero in Frameworks */ = {isa = PBXBuildFile; productRef = F969514B2C217E31009A4362 /* HUDHero */; };
 		F9DDB8792C217897007D1621 /* MultiplatformAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DDB8782C217897007D1621 /* MultiplatformAppApp.swift */; };
 		F9DDB87B2C217897007D1621 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DDB87A2C217897007D1621 /* ContentView.swift */; };
 		F9DDB87D2C217897007D1621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9DDB87C2C217897007D1621 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F969514C2C217E31009A4362 /* HUDHero in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +75,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F969514A2C217E31009A4362 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F9DDB86C2C217897007D1621 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +90,7 @@
 				F9DDB8892C217897007D1621 /* MultiplatformAppTests */,
 				F9DDB8932C217897007D1621 /* MultiplatformAppUITests */,
 				F9DDB8762C217897007D1621 /* Products */,
+				F969514A2C217E31009A4362 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +157,9 @@
 			dependencies = (
 			);
 			name = MultiplatformApp;
+			packageProductDependencies = (
+				F969514B2C217E31009A4362 /* HUDHero */,
+			);
 			productName = MultiplatformApp;
 			productReference = F9DDB8752C217897007D1621 /* MultiplatformApp.app */;
 			productType = "com.apple.product-type.application";
@@ -611,6 +624,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F969514B2C217E31009A4362 /* HUDHero */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HUDHero;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F9DDB86D2C217897007D1621 /* Project object */;
 }
