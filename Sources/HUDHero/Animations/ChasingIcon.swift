@@ -74,16 +74,17 @@ extension ChasingIcon {
     }
     
     static var `default`: ChasingIcon = {
-        let config = ChasingIcon.Config(
-            iconName: "circle.fill",
-            iconSize: 4.0,
-            foregroundColor: .primary,
-            keepOrientation: true,
-            count: 20,
-            size: 30,
-            rps: 1
+        ChasingIcon(
+            config: Config(
+                iconName: "circle.fill",
+                iconSize: 4.0,
+                foregroundColor: .primary,
+                keepOrientation: true,
+                count: 20,
+                size: 30,
+                rps: 1
+            )
         )
-        return ChasingIcon(config: config)
     }()
 }
 
