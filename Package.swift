@@ -6,7 +6,7 @@ let package = Package(
     name: "HUDHero",
     platforms: [
       .iOS(.v15),
-      .macOS(.v10_15),
+      .macOS(.v12),
       .tvOS(.v13),
       .watchOS(.v6),
       .visionOS(.v1)
