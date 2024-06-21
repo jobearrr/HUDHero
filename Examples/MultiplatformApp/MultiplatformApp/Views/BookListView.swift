@@ -32,7 +32,8 @@ struct BookListView: View {
                 
                 HUDBuilder()
                     .animation(.gradientCircle)
-                    .fadeOutWhenFinished($viewModel.isLoading)
+                    .foregroundColor(.accentColor)
+                    .isLoading($viewModel.isLoading)
                     .build()
             }
         }
