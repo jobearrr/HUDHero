@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F969514C2C217E31009A4362 /* HUDHero in Frameworks */ = {isa = PBXBuildFile; productRef = F969514B2C217E31009A4362 /* HUDHero */; };
+		F96C91BF2C249C9200994E08 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96C91BE2C249C9200994E08 /* BookListView.swift */; };
+		F96C91C22C249CCC00994E08 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96C91C12C249CCC00994E08 /* Book.swift */; };
+		F96C91C72C24B87A00994E08 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96C91C62C24B87A00994E08 /* BooksViewModel.swift */; };
 		F9DDB8792C217897007D1621 /* MultiplatformAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DDB8782C217897007D1621 /* MultiplatformAppApp.swift */; };
 		F9DDB87B2C217897007D1621 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DDB87A2C217897007D1621 /* ContentView.swift */; };
 		F9DDB87D2C217897007D1621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9DDB87C2C217897007D1621 /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F96C91BE2C249C9200994E08 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
+		F96C91C12C249CCC00994E08 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		F96C91C62C24B87A00994E08 /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
 		F9DDB8752C217897007D1621 /* MultiplatformApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiplatformApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9DDB8782C217897007D1621 /* MultiplatformAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplatformAppApp.swift; sourceTree = "<group>"; };
 		F9DDB87A2C217897007D1621 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +88,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F96C91BC2C249C2400994E08 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F9DDB87A2C217897007D1621 /* ContentView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F96C91BD2C249C4400994E08 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F96C91BE2C249C9200994E08 /* BookListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F96C91C02C249CC000994E08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F96C91C12C249CCC00994E08 /* Book.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F96C91C52C24B86800994E08 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F96C91C62C24B87A00994E08 /* BooksViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		F9DDB86C2C217897007D1621 = {
 			isa = PBXGroup;
 			children = (
@@ -107,8 +145,11 @@
 		F9DDB8772C217897007D1621 /* MultiplatformApp */ = {
 			isa = PBXGroup;
 			children = (
+				F96C91C52C24B86800994E08 /* ViewModels */,
+				F96C91C02C249CC000994E08 /* Models */,
+				F96C91BD2C249C4400994E08 /* Views */,
+				F96C91BC2C249C2400994E08 /* Screens */,
 				F9DDB8782C217897007D1621 /* MultiplatformAppApp.swift */,
-				F9DDB87A2C217897007D1621 /* ContentView.swift */,
 				F9DDB87C2C217897007D1621 /* Assets.xcassets */,
 				F9DDB87E2C217897007D1621 /* MultiplatformApp.entitlements */,
 				F9DDB87F2C217897007D1621 /* Preview Content */,
@@ -274,7 +315,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F96C91C72C24B87A00994E08 /* BooksViewModel.swift in Sources */,
+				F96C91C22C249CCC00994E08 /* Book.swift in Sources */,
 				F9DDB87B2C217897007D1621 /* ContentView.swift in Sources */,
+				F96C91BF2C249C9200994E08 /* BookListView.swift in Sources */,
 				F9DDB8792C217897007D1621 /* MultiplatformAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
