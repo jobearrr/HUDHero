@@ -9,7 +9,8 @@ import SwiftUI
 
 public struct HUD: View {
     
-    let animation: HUDAnimation = .chasingDot
+    let animation: HUDAnimation
+    let foregroundColor: Color
     @Binding var isLoading: Bool
     @State private var show: Bool = false
     

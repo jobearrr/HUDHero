@@ -10,14 +10,15 @@ import SwiftUI
 
 public final class HUDBuilder: ObservableObject {
     private var animation: HUDAnimation = .gradientCircle
-    @Binding var fadeOutWhenFinished: Bool
+    private var foregroundColor: Color = .primary
+    @Binding var isLoading: Bool
     
     public convenience init() {
-        self.init(fadeOutWhenFinished: .constant(false))
+        self.init(isLoading: .constant(false))
     }
     
-    private init(fadeOutWhenFinished: Binding<Bool>) {
-        self._fadeOutWhenFinished = fadeOutWhenFinished
+    private init(isLoading: Binding<Bool>) {
+        self._isLoading = isLoading
     }
     
     @discardableResult
@@ -27,12 +28,22 @@ public final class HUDBuilder: ObservableObject {
     }
     
     @discardableResult
-    public func fadeOutWhenFinished(_ fadeOutWhenFinished: Binding<Bool>) -> Self {
-        self._fadeOutWhenFinished = fadeOutWhenFinished
+    public func foregroundColor(_ foregroundColor: Color) -> Self {
+        self.foregroundColor = foregroundColor
+        return self
+    }
+    
+    @discardableResult
+    public func isLoading(_ isLoading: Binding<Bool>) -> Self {
+        self._isLoading = isLoading
         return self
     }
     
     public func build() -> HUD {
-        HUD(isLoading: _fadeOutWhenFinished)
+        HUD(
+            animation: animation,
+            foregroundColor: foregroundColor,
+            isLoading: _isLoading
+        )
     }
 }
