@@ -7,42 +7,40 @@
 
 import SwiftUI
 
-struct HUD: View {
+public struct HUD: View {
     
-    let config: Config
+    let animation: HUDAnimation = .chasingDot
+    @Binding var isLoading: Bool
+    @State private var show: Bool = false
     
-    var body: some View {
+    public var body: some View {
         ZStack {
-            ZStack {
-                animation
+            if show {
+                ZStack {
+                    animationView
+                }
+                .frame(width: 100, height: 100)
+                .background(.ultraThinMaterial)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
             }
-            .frame(width: 100, height: 100)
-            .background(.ultraThinMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+        }
+        .transition(.asymmetric(insertion: .scale, removal: .opacity))
+        .onChange(of: isLoading) { newValue in
+            show = newValue
         }
     }
     
-    private var animation: some View {
-        switch config.animation {
-        case .chasingDot:
-            ChasingIcon.default
+    @ViewBuilder
+    private var animationView: some View {
+        switch animation {
+        case .chasingDot: ChasingIcon.default
+        case .gradientCircle: GradientCircle.default
         }
     }
-}
-
-extension HUD {
-    struct Config {
-        let animation: HUDAnimation
-    }
-    
-    static var `default`: HUD = {
-        let config = Config(
-            animation: .chasingDot
-        )
-        return .init(config: config)
-    }()
 }
 
 #Preview {
-    HUD.default
+    HUDBuilder()
+        .animation(.chasingDot)
+        .build()
 }
