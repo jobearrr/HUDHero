@@ -10,10 +10,6 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
-permissions:
-  contents: write
-  id-token: write
-
 concurrency:
   group: "CI"
 
@@ -32,4 +28,5 @@ jobs:
       uses: jobearrr/xcresulttool@v1
       with:
         path: HUDHero.xcresult
+        token: ${{ secrets.GITHUB_TOKEN }}
       if: success() || failure()
