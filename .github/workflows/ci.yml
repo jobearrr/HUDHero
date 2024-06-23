@@ -10,6 +10,13 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: "CI"
+
 jobs:
   build:
     runs-on: macos-latest
@@ -22,7 +29,7 @@ jobs:
     - name: Build and Tests
       run: xcodebuild build -scheme HUDHero -sdk iphonesimulator17.5 -destination "OS=17.5,name=iPhone 15 Pro" -resultBundlePath HUDHero.xcresult test
     - name: Display test results
-      uses: kishikawakatsumi/xcresulttool@v1
+      uses: jobearrr/xcresulttool@v1
       with:
         path: HUDHero.xcresult
       if: success() || failure()
