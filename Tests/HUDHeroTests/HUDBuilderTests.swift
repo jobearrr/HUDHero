@@ -9,7 +9,7 @@ import XCTest
 import SwiftUI
 @testable import HUDHero
 
-class HUDBuilderTests: XCTestCase {
+final class HUDBuilderTests: XCTestCase {
 
     func testHUDBuilderInit() {
         let builder = HUDBuilder()
