@@ -27,7 +27,7 @@ jobs:
           -destination "OS=17.5,name=iPhone 15 Pro" \
           ONLY_ACTIVE_ARCH=YES \
           -resultBundlePath HUDHero.xcresult
-          -derivedDataPath /tmp/DerivedDataWithCoverageForiOS \
+          -derivedDataPath /tmp/DerivedDataWithCoverageForiOS
       - name: Test & publish code coverage
         uses: paambaati/codeclimate-action@v3.2.0
         env:
