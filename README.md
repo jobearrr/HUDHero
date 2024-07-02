@@ -1,6 +1,7 @@
 # HUD Hero
 
 [![GitHub last commit][last-commit-shield]][last-commit-url]
+[![CI Status][ci-status-shield]][ci-status-url]
 [![SPM Compatible][spm-shield]][spm-url]
 [![Carthage Compatible][carthage-shield]][carthage-url]
 [![MIT License][license-shield]][license-url]
@@ -59,6 +60,8 @@ https://github.com/jobearrr/HUDHero/assets/1816444/d068bfd5-c3d7-45fd-9f3d-eb4d8
 <!-- Markdown references https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [last-commit-shield]: https://img.shields.io/github/last-commit/jobearrr/LeetSwift?style=flat
 [last-commit-url]: https://github.com/jobearrr/LeetSwift/commits/master
+[ci-status-shield]: https://github.com/jobearrr/HUDHero/actions/workflows/main.yml/badge.svg
+[ci-status-url]: https://github.com/jobearrr/HUDHero/actions/workflows/main.yml
 [spm-shield]: https://img.shields.io/badge/SwiftPM-Compatible-brightgreen.svg
 [spm-url]: https://swiftpackageindex.com
 [carthage-shield]: https://img.shields.io/badge/Carthage-compatible-brightgreen.svg?style=flat
