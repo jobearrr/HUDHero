@@ -66,5 +66,5 @@ https://github.com/jobearrr/HUDHero/assets/1816444/d068bfd5-c3d7-45fd-9f3d-eb4d8
 [spm-url]: https://swiftpackageindex.com
 [carthage-shield]: https://img.shields.io/badge/Carthage-compatible-brightgreen.svg?style=flat
 [carthage-url]: https://github.com/Carthage/Carthage
-[license-shield]: https://img.shields.io/github/license/jobearrr/LeetSwift.svg?style=flat
-[license-url]: https://github.com/jobearrr/LeetSwift/LICENSE
+[license-shield]: https://img.shields.io/github/license/jobearrr/HUDHero.svg?style=flat
+[license-url]: https://github.com/jobearrr/HUDHero/LICENSE
