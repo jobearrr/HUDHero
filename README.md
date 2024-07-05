@@ -2,6 +2,8 @@
 
 [![GitHub last commit][last-commit-shield]][last-commit-url]
 [![CI Status][ci-status-shield]][ci-status-url]
+[![Maintainability][maintainability-shield]][maintainability-url]
+[![Test Coverage][coverage-shield]][coverage-url]
 [![SPM Compatible][spm-shield]][spm-url]
 [![Carthage Compatible][carthage-shield]][carthage-url]
 [![MIT License][license-shield]][license-url]
@@ -62,6 +64,10 @@ https://github.com/jobearrr/HUDHero/assets/1816444/d068bfd5-c3d7-45fd-9f3d-eb4d8
 [last-commit-url]: https://github.com/jobearrr/LeetSwift/commits/master
 [ci-status-shield]: https://github.com/jobearrr/HUDHero/actions/workflows/main.yml/badge.svg
 [ci-status-url]: https://github.com/jobearrr/HUDHero/actions/workflows/main.yml
+[maintainability-shield]: https://api.codeclimate.com/v1/badges/5621fae170787d455968/maintainability
+[maintainability-url]: https://codeclimate.com/github/jobearrr/HUDHero/maintainability
+[coverage-shield]: https://api.codeclimate.com/v1/badges/5621fae170787d455968/test_coverage
+[coverage-url]: https://codeclimate.com/github/jobearrr/HUDHero/test_coverage
 [spm-shield]: https://img.shields.io/badge/SwiftPM-Compatible-brightgreen.svg
 [spm-url]: https://swiftpackageindex.com
 [carthage-shield]: https://img.shields.io/badge/Carthage-compatible-brightgreen.svg?style=flat
