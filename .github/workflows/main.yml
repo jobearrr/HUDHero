@@ -28,13 +28,3 @@ jobs:
           ONLY_ACTIVE_ARCH=YES \
           -resultBundlePath HUDHero.xcresult \
           -derivedDataPath /tmp/DerivedDataWithCoverageForiOS
-      - name: Test & publish code coverage
-        uses: paambaati/codeclimate-action@v3.2.0
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-        with:
-          debug: true
-          coverageCommand: |
-            slather coverage -x --scheme "HUDHero" --output-directory "slather_reports/HUDHero_iOS" -b "/tmp/DerivedDataWithCoverageForiOS"
-          coverageLocations: |
-            ${{ github.workspace }}/slather_reports/HUDHero_iOS/cobertura.xml:cobertura
