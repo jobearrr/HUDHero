@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct GradientCircle: View {
-    
+
     let config: Config
     @State private var rotationAngle: CGFloat = .zero
-    
+
     var body: some View {
         ZStack {
             Image(systemName: config.iconName)
@@ -30,7 +30,7 @@ struct GradientCircle: View {
             }
         }
     }
-    
+
     private func gradient() -> some ShapeStyle {
         let gradient = Gradient(colors: [
             config.foregroundColor.opacity(0),
@@ -41,7 +41,7 @@ struct GradientCircle: View {
             center: .center
         )
     }
-    
+
     private func animation() -> Animation {
         let duration = TimeInterval(1.0/CGFloat(config.rps))
         let animation: Animation = .linear(duration: duration)
@@ -56,7 +56,7 @@ extension GradientCircle {
         let size: CGFloat
         let rps: Int
     }
-    
+
     static var `default`: GradientCircle = {
         GradientCircle(
             config: Config(

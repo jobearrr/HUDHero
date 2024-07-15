@@ -8,12 +8,12 @@
 import SwiftUI
 
 public struct HUD: View {
-    
+
     let animation: HUDAnimation
     let foregroundColor: Color
     @Binding var isLoading: Bool
     @State private var show: Bool = false
-    
+
     public var body: some View {
         ZStack {
             if show {
@@ -30,7 +30,7 @@ public struct HUD: View {
             show = newValue
         }
     }
-    
+
     @ViewBuilder
     private var animationView: some View {
         switch animation {

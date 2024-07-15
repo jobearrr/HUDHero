@@ -13,7 +13,7 @@ final class GradientCircleTests: XCTestCase {
 
     func testGradientCircleDefault() {
         let gradientCircle = GradientCircle.default
-        
+
         XCTAssertEqual(gradientCircle.config.iconName, "circle")
         XCTAssertEqual(gradientCircle.config.foregroundColor, .primary)
         XCTAssertEqual(gradientCircle.config.size, 30)

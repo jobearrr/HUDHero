@@ -16,9 +16,9 @@ struct Book: Decodable, Identifiable {
 }
 
 extension Book {
-    
+
     static func all() -> [Book] {
         return []
     }
-    
+
 }

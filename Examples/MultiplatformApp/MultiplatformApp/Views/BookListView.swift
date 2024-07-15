@@ -9,9 +9,9 @@ import HUDHero
 import SwiftUI
 
 struct BookListView: View {
-    
+
     @StateObject private var viewModel = BooksViewModel()
-    
+
     var body: some View {
         VStack {
             TextField("Search Books", text: $viewModel.searchText)
@@ -29,7 +29,7 @@ struct BookListView: View {
                         }
                     }
                 }
-                
+
                 HUDBuilder()
                     .animation(.gradientCircle)
                     .foregroundColor(.accentColor)

@@ -10,10 +10,10 @@ import SwiftUI
 @testable import HUDHero
 
 final class ChasingIconTests: XCTestCase {
-    
+
     func testChasingIconDefault() {
         let icon = ChasingIcon.default
-        
+
         XCTAssertEqual(icon.config.iconName, "circle.fill")
         XCTAssertEqual(icon.config.iconSize, 4.0)
         XCTAssertEqual(icon.config.foregroundColor, .primary)
