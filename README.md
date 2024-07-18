@@ -60,8 +60,8 @@ https://github.com/jobearrr/HUDHero/assets/1816444/d068bfd5-c3d7-45fd-9f3d-eb4d8
 
 
 <!-- Markdown references https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[last-commit-shield]: https://img.shields.io/github/last-commit/jobearrr/LeetSwift?style=flat
-[last-commit-url]: https://github.com/jobearrr/LeetSwift/commits/master
+[last-commit-shield]: https://img.shields.io/github/last-commit/jobearrr/HUDHero?style=flat
+[last-commit-url]: https://github.com/jobearrr/HUDHero/commits/master
 [ci-status-shield]: https://github.com/jobearrr/HUDHero/actions/workflows/main.yml/badge.svg
 [ci-status-url]: https://github.com/jobearrr/HUDHero/actions/workflows/main.yml
 [maintainability-shield]: https://api.codeclimate.com/v1/badges/5621fae170787d455968/maintainability
