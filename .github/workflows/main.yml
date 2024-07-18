@@ -10,21 +10,20 @@ concurrency:
 
 jobs:
   test-and-gather-test-coverage:
-    runs-on: macos-latest
+    runs-on: macos-13
     timeout-minutes: 30
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Install Slather
-        run: sudo gem install slather
-      - name: Select Xcode version
-        run: sudo xcode-select -s /Applications/Xcode_15.4.app
-      - name: Build & Tests
-        run: |
-          xcodebuild clean build test \
-          -scheme HUDHero \
-          -sdk iphonesimulator17.5 \
-          -destination "OS=17.5,name=iPhone 15 Pro" \
-          ONLY_ACTIVE_ARCH=YES \
-          -resultBundlePath HUDHero.xcresult \
-          -derivedDataPath /tmp/DerivedDataWithCoverageForiOS
+    - uses: actions/checkout@v4
+    - name: Build
+      run: swift build -v
+
+    - name: Test & publish code coverage to Code Climate
+      uses: paambaati/codeclimate-action@v8.0.0
+      env:
+        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+      with:
+        coverageCommand: swift test -v --enable-code-coverage
+        debug: true
+        coverageLocations: |
+          ${{github.workspace}}/.build/debug/codecov/*.json:lcov-json
