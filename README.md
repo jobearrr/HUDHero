@@ -1,4 +1,4 @@
-# HUD Hero
+# `🦸 HUDHero`
 
 [![GitHub last commit][last-commit-shield]][last-commit-url]
 [![CI Status][ci-status-shield]][ci-status-url]
