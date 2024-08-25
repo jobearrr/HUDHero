@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+/// An animation of a circle with a thick line and a gradient through the circle line,
+/// and the circle spins around.
 struct GradientCircle: View {
 
-    let config: Config
+    let config: GradientCircleConfig
     @State private var rotationAngle: CGFloat = .zero
 
     var body: some View {
@@ -45,6 +47,13 @@ struct GradientCircle: View {
     }
 }
 
+struct GradientCircleConfig: HUDConfig {
+    let iconName: String
+    let foregroundColor: Color
+    let size: CGFloat
+    let rps: Int
+}
+
 extension GradientCircle {
     struct Config {
         let iconName: String
@@ -55,7 +64,7 @@ extension GradientCircle {
 
     static var `default`: GradientCircle = {
         GradientCircle(
-            config: Config(
+            config: GradientCircleConfig(
                 iconName: "circle",
                 foregroundColor: .primary,
                 size: 30,

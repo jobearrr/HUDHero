@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+/// A HUD animation where one icon spins around and its copy follows it,
+/// giving the effect of the icon being chased (hence the name).
 struct ChasingIcon: View {
 
-    let config: Config
+    let config: ChasingIconConfig
     @State private var rotationAngle: CGFloat = .zero
 
     var body: some View {
@@ -58,20 +60,21 @@ struct ChasingIcon: View {
     }
 }
 
+struct ChasingIconConfig: HUDConfig {
+    let iconName: String
+    let iconSize: CGFloat
+    let foregroundColor: Color
+    let keepOrientation: Bool
+    let count: Int
+    let size: CGFloat
+    let rps: Int
+}
+
 extension ChasingIcon {
-    struct Config {
-        let iconName: String
-        let iconSize: CGFloat
-        let foregroundColor: Color
-        let keepOrientation: Bool
-        let count: Int
-        let size: CGFloat
-        let rps: Int
-    }
 
     static var `default`: ChasingIcon = {
         ChasingIcon(
-            config: Config(
+            config: ChasingIconConfig(
                 iconName: "circle.fill",
                 iconSize: 4.0,
                 foregroundColor: .primary,
