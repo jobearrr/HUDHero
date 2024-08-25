@@ -27,11 +27,7 @@ struct ChasingIcon: View {
         }
         .frame(width: config.size, height: config.size)
         .clipped()
-        .onAppear {
-            withAnimation(animation()) {
-                rotationAngle += 360
-            }
-        }
+        .rotating($rotationAngle, duration: 1.0/CGFloat(config.rps))
     }
 
     private func size(for index: Int) -> CGFloat {
