@@ -11,7 +11,7 @@ import SwiftUI
 /// and the circle spins around.
 struct GradientCircle: View {
 
-    let config: GradientCircleConfig
+    let config: Config
     @State private var rotationAngle: CGFloat = .zero
 
     var body: some View {
@@ -47,15 +47,8 @@ struct GradientCircle: View {
     }
 }
 
-struct GradientCircleConfig: HUDConfig {
-    let iconName: String
-    let foregroundColor: Color
-    let size: CGFloat
-    let rps: Int
-}
-
 extension GradientCircle {
-    struct Config {
+    struct Config: HUDConfig {
         let iconName: String
         let foregroundColor: Color
         let size: CGFloat
@@ -64,7 +57,7 @@ extension GradientCircle {
 
     static var `default`: GradientCircle = {
         GradientCircle(
-            config: GradientCircleConfig(
+            config: Config(
                 iconName: "circle",
                 foregroundColor: .primary,
                 size: 30,

@@ -11,7 +11,7 @@ import SwiftUI
 /// giving the effect of the icon being chased (hence the name).
 struct ChasingIcon: View {
 
-    let config: ChasingIconConfig
+    let config: Config
     @State private var rotationAngle: CGFloat = .zero
 
     var body: some View {
@@ -60,21 +60,20 @@ struct ChasingIcon: View {
     }
 }
 
-struct ChasingIconConfig: HUDConfig {
-    let iconName: String
-    let iconSize: CGFloat
-    let foregroundColor: Color
-    let keepOrientation: Bool
-    let count: Int
-    let size: CGFloat
-    let rps: Int
-}
-
 extension ChasingIcon {
+    struct Config: HUDConfig {
+        let iconName: String
+        let iconSize: CGFloat
+        let foregroundColor: Color
+        let keepOrientation: Bool
+        let count: Int
+        let size: CGFloat
+        let rps: Int
+    }
 
     static var `default`: ChasingIcon = {
         ChasingIcon(
-            config: ChasingIconConfig(
+            config: Config(
                 iconName: "circle.fill",
                 iconSize: 4.0,
                 foregroundColor: .primary,
